@@ -490,6 +490,63 @@ ul { list-style: none; }
 }
 
 /* ============================================================
+   SKILLS FORGE BANNER
+   ============================================================ */
+.forge-banner {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 56px;
+  box-shadow: var(--glow-lg);
+  border: var(--border-glass);
+  background-image: url('../assets/skills-forge-banner.webp');
+  background-size: cover;
+  background-position: center top;
+  min-height: 420px;
+  transition: background-position 0.5s ease;
+}
+.forge-banner:hover {
+  background-position: center 10%;
+}
+.forge-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(3,0,8,0.88) 0%,
+    rgba(13,5,32,0.65) 55%,
+    rgba(3,0,8,0.2) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 56px;
+  gap: 14px;
+}
+.forge-banner-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-shadow: var(--glow-lg);
+  line-height: 1;
+}
+.forge-banner-sub {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--gray-300);
+  letter-spacing: 0.05em;
+  max-width: 420px;
+}
+
+@media (max-width: 600px) {
+  .forge-banner { min-height: 280px; background-position: 60% top; }
+  .forge-banner-overlay { padding: 28px 24px; }
+}
+
+/* ============================================================
    SOFTWARE PACKAGES
    ============================================================ */
 .packages-grid {
