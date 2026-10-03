@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Slumber Realms Studio — Dream Worlds. Endless Journeys. Deep Rest. Software packages and media.">
+  <meta property="og:title" content="Slumber Realms Studio">
+  <meta property="og:description" content="Dream Worlds. Endless Journeys. Deep Rest.">
+  <meta property="og:image" content="assets/logo.png">
+  <title>Slumber Realms Studio</title>
+  <link rel="icon" href="assets/logo_small.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Starfield canvas -->
+  <canvas id="starfield"></canvas>
+
+  <!-- Floating particles -->
+  <div class="particles" id="particles"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="assets/logo_small.png" alt="Slumber Realms" class="nav-logo-img">
+        <span class="nav-logo-text">SLUMBER REALMS</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#software" class="nav-link">Software</a></li>
+        <li><a href="#media" class="nav-link">Media</a></li>
+        <li><a href="#worlds" class="nav-link">Worlds</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="https://youtube.com/@slumberrealms" class="btn btn-nav" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-nebula"></div>
+    <div class="hero-content">
+      <div class="hero-logo-wrap fade-up">
+        <img src="assets/logo.png" alt="Slumber Realms" class="hero-logo" id="heroLogo">
+        <div class="hero-logo-ring"></div>
+      </div>
+      <div class="hero-text fade-up delay-1">
+        <h1 class="hero-title">
+          <span class="glitch" data-text="SLUMBER REALMS">SLUMBER REALMS</span>
+        </h1>
+        <p class="hero-studio">— STUDIO —</p>
+        <p class="hero-tagline">Dream Worlds. &nbsp;Endless Journeys. &nbsp;Deep Rest.</p>
+      </div>
+      <div class="hero-cta fade-up delay-2">
+        <a href="#software" class="btn btn-primary">Explore Software</a>
+        <a href="#media" class="btn btn-ghost">View Media</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span class="scroll-label">Scroll</span>
+      <div class="scroll-chevron"></div>
+    </div>
+  </section>
+
+  <!-- ===== SOFTWARE ===== -->
+  <section id="software" class="section">
+    <div class="section-glow glow-left"></div>
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-eyebrow">Tools of the Realms</span>
+        <h2 class="section-title">Software Packages</h2>
+        <p class="section-sub">Purpose-built tools crafted inside the Slumber Realms universe.</p>
+      </div>
+
+      <div class="packages-grid">
+
+        <div class="pkg-card fade-up" data-category="video">
+          <div class="pkg-card-glow"></div>
+          <div class="pkg-header">
+            <div class="pkg-icon">🎬</div>
+            <div class="pkg-meta">
+              <span class="pkg-badge">v1.6</span>
+              <span class="pkg-category">Video</span>
+            </div>
+          </div>
+          <h3 class="pkg-name">Slumber Video Pipeline</h3>
+          <p class="pkg-desc">Automated multi-platform video processing and upload system with Cloudflare tunnel support, batch queuing, and loop rendering.</p>
+          <div class="pkg-tags">
+            <span class="tag">Python</span><span class="tag">FFmpeg</span><span class="tag">Cloudflare</span>
+          </div>
+          <div class="pkg-actions">
+            <a href="#" class="btn btn-sm btn-primary">Download</a>
+            <a href="#" class="btn btn-sm btn-ghost">Docs</a>
+          </div>
+        </div>
+
+        <div class="pkg-card fade-up delay-1" data-category="audio">
+          <div class="pkg-card-glow"></div>
+          <div class="pkg-header">
+            <div class="pkg-icon">🎙️</div>
+            <div class="pkg-meta">
+              <span class="pkg-badge">v1.0</span>
+              <span class="pkg-category">Audio</span>
+            </div>
+          </div>
+          <h3 class="pkg-name">Podcast Intelligence Studio</h3>
+          <p class="pkg-desc">AI-powered podcast analysis engine. Extracts insights, generates episode summaries, and builds content strategies from audio.</p>
+          <div class="pkg-tags">
+            <span class="tag">Python</span><span class="tag">AI</span><span class="tag">Streamlit</span>
+          </div>
+          <div class="pkg-actions">
+            <a href="#" class="btn btn-sm btn-primary">Download</a>
+            <a href="#" class="btn btn-sm btn-ghost">Docs</a>
+          </div>
+        </div>
+
+        <div class="pkg-card fade-up delay-2" data-category="audio">
+          <div class="pkg-card-glow"></div>
+          <div class="pkg-header">
+            <div class="pkg-icon">🍲</div>
+            <div class="pkg-meta">
+              <span class="pkg-badge">v1.0</span>
+              <span class="pkg-category">Audio</span>
+            </div>
+          </div>
+          <h3 class="pkg-name">PodSoup</h3>
+          <p class="pkg-desc">Chunked MP3 transcription with speaker isolation. Segment, identify speakers, and export clean transcripts at scale.</p>
+          <div class="pkg-tags">
+            <span class="tag">Python</span><span class="tag">Whisper</span><span class="tag">NLP</span>
+          </div>
+          <div class="pkg-actions">
+            <a href="#" class="btn btn-sm btn-primary">Download</a>
+            <a href="#" class="btn btn-sm btn-ghost">Docs</a>
+          </div>
+        </div>
+
+        <div class="pkg-card fade-up" data-category="audio">
+          <div class="pkg-card-glow"></div>
+          <div class="pkg-header">
+            <div class="pkg-icon">🎚️</div>
+            <div class="pkg-meta">
+              <span class="pkg-badge">v1.0</span>
+              <span class="pkg-category">Audio</span>
+            </div>
+          </div>
+          <h3 class="pkg-name">DJ Studio</h3>
+          <p class="pkg-desc">Audio loop processing and mixing toolkit. Build seamless loops, apply FFmpeg effects, and export broadcast-ready audio.</p>
+          <div class="pkg-tags">
+            <span class="tag">Python</span><span class="tag">FFmpeg</span><span class="tag">Audio</span>
+          </div>
+          <div class="pkg-actions">
+            <a href="#" class="btn btn-sm btn-primary">Download</a>
+            <a href="#" class="btn btn-sm btn-ghost">Docs</a>
+          </div>
+        </div>
+
+        <div class="pkg-card fade-up delay-1" data-category="analytics">
+          <div class="pkg-card-glow"></div>
+          <div class="pkg-header">
+            <div class="pkg-icon">📊</div>
+            <div class="pkg-meta">
+              <span class="pkg-badge">v1.1</span>
+              <span class="pkg-category">Analytics</span>
+            </div>
+          </div>
+          <h3 class="pkg-name">Performance Engine</h3>
+          <p class="pkg-desc">Content performance analytics and comparison engine. Track views, engagement, and growth metrics across all platforms.</p>
+          <div class="pkg-tags">
+            <span class="tag">Python</span><span class="tag">Analytics</span><span class="tag">CLI</span>
+          </div>
+          <div class="pkg-actions">
+            <a href="#" class="btn btn-sm btn-primary">Download</a>
+            <a href="#" class="btn btn-sm btn-ghost">Docs</a>
+          </div>
+        </div>
+
+        <div class="pkg-card fade-up delay-2" data-category="ai">
+          <div class="pkg-card-glow"></div>
+          <div class="pkg-header">
+            <div class="pkg-icon">🏴‍☠️</div>
+            <div class="pkg-meta">
+              <span class="pkg-badge">v1.0</span>
+              <span class="pkg-category">AI</span>
+            </div>
+          </div>
+          <h3 class="pkg-name">Slumber Pirate</h3>
+          <p class="pkg-desc">AI-driven content generator for YouTube and social media. Craft titles, descriptions, tags, and scripts at scale.</p>
+          <div class="pkg-tags">
+            <span class="tag">Python</span><span class="tag">AI</span><span class="tag">YouTube</span>
+          </div>
+          <div class="pkg-actions">
+            <a href="#" class="btn btn-sm btn-primary">Download</a>
+            <a href="#" class="btn btn-sm btn-ghost">Docs</a>
+          </div>
+        </div>
+
+      </div><!-- /packages-grid -->
+    </div>
+  </section>
+
+  <!-- ===== MEDIA ===== -->
+  <section id="media" class="section">
+    <div class="section-glow glow-right"></div>
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-eyebrow">From the Realms</span>
+        <h2 class="section-title">Media</h2>
+        <p class="section-sub">Soundscapes, visuals, and stories from every dream world.</p>
+      </div>
+
+      <div class="media-grid">
+
+        <div class="media-card featured fade-up">
+          <div class="media-thumb">
+            <div class="media-thumb-bg" style="--hue:270"></div>
+            <div class="media-play">▶</div>
+            <span class="media-badge">YouTube</span>
+          </div>
+          <div class="media-info">
+            <span class="media-world">Cyberpunk Refuge</span>
+            <h3 class="media-title">Neon Rain — Deep Focus Mix</h3>
+            <p class="media-desc">Rain-soaked streets and synth waves. A 2-hour ambient journey through the city that never sleeps.</p>
+            <a href="https://youtube.com/@slumberrealms" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Watch Now</a>
+          </div>
+        </div>
+
+        <div class="media-card fade-up delay-1">
+          <div class="media-thumb">
+            <div class="media-thumb-bg" style="--hue:30"></div>
+            <div class="media-play">▶</div>
+            <span class="media-badge">YouTube</span>
+          </div>
+          <div class="media-info">
+            <span class="media-world">Dutton Ranch</span>
+            <h3 class="media-title">Prairie Wind — Sleep Sounds</h3>
+            <a href="https://youtube.com/@slumberrealms" class="btn btn-sm btn-ghost" target="_blank" rel="noopener">Watch</a>
+          </div>
+        </div>
+
+        <div class="media-card fade-up delay-2">
+          <div class="media-thumb">
+            <div class="media-thumb-bg" style="--hue:200"></div>
+            <div class="media-play">▶</div>
+            <span class="media-badge">YouTube</span>
+          </div>
+          <div class="media-info">
+            <span class="media-world">Space Residences</span>
+            <h3 class="media-title">Orbital Drift — Zero-G Ambience</h3>
+            <a href="https://youtube.com/@slumberrealms" class="btn btn-sm btn-ghost" target="_blank" rel="noopener">Watch</a>
+          </div>
+        </div>
+
+        <div class="media-card fade-up delay-3">
+          <div class="media-thumb">
+            <div class="media-thumb-bg" style="--hue:140"></div>
+            <div class="media-play">▶</div>
+            <span class="media-badge">YouTube</span>
+          </div>
+          <div class="media-info">
+            <span class="media-world">Bigfoot Resort</span>
+            <h3 class="media-title">Forest Cabin — Nature Sounds</h3>
+            <a href="https://youtube.com/@slumberrealms" class="btn btn-sm btn-ghost" target="_blank" rel="noopener">Watch</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="media-cta fade-up">
+        <a href="https://youtube.com/@slumberrealms" class="btn btn-primary" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.22 8.22 0 004.79 1.53V6.77a4.85 4.85 0 01-1.02-.08z"/></svg>
+          View All on YouTube
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORLDS ===== -->
+  <section id="worlds" class="section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-eyebrow">Choose Your Realm</span>
+        <h2 class="section-title">Dream Worlds</h2>
+        <p class="section-sub">Every world is a doorway. Step through and stay a while.</p>
+      </div>
+      <div class="worlds-grid">
+
+        <div class="world-card fade-up" style="--world-color: #7C3AED">
+          <div class="world-bg" style="background: radial-gradient(circle at 30% 50%, rgba(124,58,237,0.4), transparent 70%)"></div>
+          <div class="world-icon">🌆</div>
+          <h3 class="world-name">Cyberpunk Refuge</h3>
+          <p class="world-desc">Rain-soaked neon streets, synthwave beats, and the hum of a city that never sleeps.</p>
+          <a href="https://youtube.com/@slumberrealms" class="world-link" target="_blank" rel="noopener">Enter Realm →</a>
+        </div>
+
+        <div class="world-card fade-up delay-1" style="--world-color: #B45309">
+          <div class="world-bg" style="background: radial-gradient(circle at 30% 50%, rgba(180,83,9,0.4), transparent 70%)"></div>
+          <div class="world-icon">🤠</div>
+          <h3 class="world-name">Dutton Ranch</h3>
+          <p class="world-desc">Prairie winds, crackling fires, and the vast quiet of the open range under a million stars.</p>
+          <a href="https://youtube.com/@slumberrealms" class="world-link" target="_blank" rel="noopener">Enter Realm →</a>
+        </div>
+
+        <div class="world-card fade-up delay-2" style="--world-color: #0369A1">
+          <div class="world-bg" style="background: radial-gradient(circle at 30% 50%, rgba(3,105,161,0.4), transparent 70%)"></div>
+          <div class="world-icon">🚀</div>
+          <h3 class="world-name">Space Residences</h3>
+          <p class="world-desc">Orbital stations, distant nebulae, and the profound silence of deep space.</p>
+          <a href="https://youtube.com/@slumberrealms" class="world-link" target="_blank" rel="noopener">Enter Realm →</a>
+        </div>
+
+        <div class="world-card fade-up delay-3" style="--world-color: #15803D">
+          <div class="world-bg" style="background: radial-gradient(circle at 30% 50%, rgba(21,128,61,0.4), transparent 70%)"></div>
+          <div class="world-icon">🦶</div>
+          <h3 class="world-name">Bigfoot Resort</h3>
+          <p class="world-desc">Ancient forests, mountain cabins, and the rustle of something ancient in the pines.</p>
+          <a href="https://youtube.com/@slumberrealms" class="world-link" target="_blank" rel="noopener">Enter Realm →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contact">
+    <div class="footer-glow"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Slumber Realms" class="footer-logo">
+          <p class="footer-tagline">Dream Worlds. Endless Journeys. Deep Rest.</p>
+          <a href="mailto:media@slumberrealms.info" class="footer-email">media@slumberrealms.info</a>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-nav-col">
+            <h4>Navigate</h4>
+            <a href="#software">Software</a>
+            <a href="#media">Media</a>
+            <a href="#worlds">Worlds</a>
+          </div>
+          <div class="footer-nav-col">
+            <h4>Social</h4>
+            <a href="https://youtube.com/@slumberrealms" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://facebook.com/slumberrealms" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://instagram.com/slumberrealms" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://tiktok.com/@slumberrealms" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://twitter.com/slumberrealms" target="_blank" rel="noopener">Twitter / X</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Slumber Realms Studio. All rights reserved.</p>
+        <p class="footer-domain">slumberrealms.info</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
